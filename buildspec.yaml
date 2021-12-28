@@ -2,7 +2,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - aws s3 sync TemplateFiles/ s3://gks-cluster-provisioner-infra-assets/gks-pipeline-backup/
+      # - aws s3 sync TemplateFiles/ s3://gks-cluster-provisioner-infra-assets/gks-pipeline-backup/
       - python3 read_state.py
       - mkdir -p ./BackupFolder/dynamodb_backup 
       - mkdir -p ./BackupFolder/cognito_backup 
